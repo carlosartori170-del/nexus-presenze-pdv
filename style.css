@@ -7,3 +7,15 @@
 .date-note{font-size:.875rem}.date-correction summary{color:var(--muted);font-size:.875rem;min-height:44px;display:list-item;padding:.75rem 0}.date-controls{padding:.75rem;background:var(--bg);border-radius:7px}.date-grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:.8rem 0}.next-day{flex-direction:row;align-items:center;font-size:.875rem}.next-day input{flex-shrink:0}.date-controls button{font-size:.875rem}.date-controls p{margin:.7rem 0 0}
 
 #helper-list{max-height:40dvh;min-height:100px;overflow-y:auto;overscroll-behavior:contain;border:1px solid var(--line);border-radius:8px;-webkit-overflow-scrolling:touch}.helper-choice{display:flex;flex-direction:row;align-items:center;gap:.8rem;min-height:52px;padding:.85rem;border-bottom:1px solid var(--line);font-size:1rem;cursor:pointer}.helper-choice:last-child{border-bottom:0}.helper-choice:has(input:checked){background:#e5f5eb}.helper-choice input[type=radio]{width:22px;height:22px;min-height:22px;margin:0;flex-shrink:0;accent-color:var(--green)}.helper-choice span{overflow-wrap:anywhere}.time-grid select{font-size:1rem}
+
+/* Keep native date controls within their container, including Safari on iPhone. */
+input[type=date],input[type=datetime-local]{-webkit-appearance:none;appearance:none;display:block;box-sizing:border-box;width:100%;max-width:100%;min-width:0;min-height:46px;font-size:1rem;text-align:left}
+input[type=date]::-webkit-date-and-time-value,input[type=datetime-local]::-webkit-date-and-time-value{min-width:0;text-align:left}
+input[type=date]::-webkit-datetime-edit,input[type=datetime-local]::-webkit-datetime-edit{min-width:0;padding:0}
+.date-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.date-grid>label{min-width:0}
+@media(max-width:620px){
+ .filters{display:grid;grid-template-columns:minmax(0,1fr);align-items:stretch}
+ .filters>label{width:100%;max-width:100%;min-width:0}
+ .filters>button{width:100%;max-width:100%}
+ .date-grid{grid-template-columns:minmax(0,1fr)}
+}
