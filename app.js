@@ -1,6 +1,6 @@
 import {timeSelect,quarterErrors,initializeTimeSelects} from './quarter-hours.js?v=4';
 import {proposeDates,restoreDateModes} from './interval-dates.js?v=3';
-import {teamPage} from './teams.js?v=6';
+import {teamPage} from './teams.js?v=7';
 import {esc,isoToday,addDays,dateIT,duration,hours,validate,dayLabel} from './core.js';
 const $=id=>document.getElementById(id);
 const sb=window.supabase.createClient('https://eqtyfnluswalfassmlxd.supabase.co','sb_publishable_QFxWloxs6waJCTvV1jtuPQ_MI7K4foM',{auth:{storageKey:'nexus-pdv-pilot-session',persistSession:true,autoRefreshToken:true,detectSessionInUrl:false}});
